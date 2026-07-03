@@ -111,7 +111,7 @@ async function renderPreviews() {
         card.innerHTML = `
             <canvas id="canvas-${i}" class="pdf-preview"></canvas>
             <div class="pdf-name">Page ${i + 1}</div>
-            <button id="btn-${i}" class="toggle-btn btn-keep" onclick="togglePage(${i})">✔️ Keep Page</button>
+            <button id="btn-${i}" class="toggle-btn btn-keep" onclick="togglePage(${i})">❌ Remove this Page</button>
         `;
         
         outputContainer.appendChild(card);
@@ -151,7 +151,7 @@ window.togglePage = function(pageIndex) {
         pagesToRemove.delete(pageIndex); 
         card.classList.remove('removed-state');
         btn.className = 'toggle-btn btn-keep';
-        btn.innerHTML = '❌✔️ Remove this Page';
+        btn.innerHTML = '❌ Remove this Page';
     } else {
         // Mark for removal
         pagesToRemove.add(pageIndex); 
