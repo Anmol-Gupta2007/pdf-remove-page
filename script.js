@@ -151,13 +151,13 @@ window.togglePage = function(pageIndex) {
         pagesToRemove.delete(pageIndex); 
         card.classList.remove('removed-state');
         btn.className = 'toggle-btn btn-keep';
-        btn.innerHTML = '✔️ Keep Page';
+        btn.innerHTML = '❌✔️ Remove this Page';
     } else {
         // Mark for removal
         pagesToRemove.add(pageIndex); 
         card.classList.add('removed-state');
         btn.className = 'toggle-btn btn-remove';
-        btn.innerHTML = '❌ Removed';
+        btn.innerHTML = '✔️ Removed';
     }
     
     updateStatusText();
